@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Combat on Helix Plugins</title>
+    <link>http://localhost:1313/tags/combat/</link>
+    <description>Recent content in Combat on Helix Plugins</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/combat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Suppression</title>
+      <link>http://localhost:1313/suppression/</link>
+      <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/suppression/</guid>
+      <description>&lt;p&gt;This plugins adds a simple suppression system, where the player&amp;rsquo;s screen will become progressively more blurred as more fire is received. Supports a number of configuration settings, including if a heartbeat effect should play and the required minimum radius for a bullet to suppress a player.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features-as-of-now&#34;&gt;Features as of now&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Suppression system with a basic ix.util blur effect and vignette that becomes progressively stronger as more suppression is accrued via bullets or explosions. The amount is tied to the damage that was/would be done, so players will probably suppress you considerably more than NPCs will. I tried to do some math to balance this, but it may be pretty high still.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TFA support</title>
+      <link>http://localhost:1313/tfa-support/</link>
+      <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tfa-support/</guid>
+      <description>&lt;p&gt;Yet another gun base supported on my weapon customization architecture. This plugin adds support for TFA attachments and weapons as items integrated into Helix in an immersive way, along with a server config-level customization suite to quickly adjust options such as free attachments or visible crosshairs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features-as-of-now&#34;&gt;Features as of now&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Full support for weapon and attachment items.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Attachments that are tied to items will now require and consume an item when put on a weapon, and be returned when removed. They can also require a tool to use, which is defined in the attachment item file as just an item unique ID.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

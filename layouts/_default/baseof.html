@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+
+<head>
+	<title>
+		{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}
+	</title>
+	<link rel="canonical" href="{{ .Site.BaseURL }}" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+	{{ with .Site.Params.favicon }}
+	<link rel="icon" href="{{ . }}" />
+	{{ end -}}
+	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+	{{ if isset .Params "tags" }}
+	<meta name="keywords" content="{{ with
+    .Params.tags }}{{ delimit . " , " }}{{ end }}"> {{ end -}}
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="index, follow" />
+	<meta charset="utf-8" />
+</head>
+
+
+<body>
+	<div class="background"></div>
+	{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
+
+	<main>
+		<h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1>
+		<article>
+			{{ block "main" . }} {{ .Content }} {{ end }} {{ if .Param "nextprev"
+			}}{{ partial "nextprev.html" . -}}{{ end -}} {{ if .Param "taglist" }}{{
+			partial "taglist.html" . }}{{ end -}}
+		</article>
+	</main>
+
+	{{ block "footer" . }}
+
+	<footer>
+		<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a><br>
+		<a href="https://greywaterstud.io">greywaterstud.io</a><br>
+		<a href="{{ .Site.Params.discordURL }}">Greywater Developer Network</a><br>
+	</footer>
+	{{ end }}
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+{{- if $author -}}
+    <h2>
+        Author:
+    </h2>
+
+    {{- if $author.website -}}
+        <a href="{{ $author.website }}">{{ $author.website }}</a>
+    {{- end -}}
+
+    {{- if $author.xmr }}
+        <p style="overflow-wrap:break-word;font-size:medium">xmr: {{ $author.xmr }}</p>
+    {{- end -}}
+
+    {{- if $author.btc }}
+        btc: <code>{{ $author.btc }}</code>
+    {{- end -}}
+
+    {{- if $author.eth }}
+        eth: <code>{{ $author.eth }}</code>
+    {{- end -}}
+
+    {{- if $author.donate }}
+        <li><a href="{{ $author.donate }}">Donate/Tip</a></li>
+    {{- end -}}
+
+{{- end -}}

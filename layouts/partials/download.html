@@ -1,0 +1,10 @@
+{{- if isset .Params "link" -}}
+    {{- $link := .Params.link -}}
+    {{- if $link -}}
+        <a href="{{ $link }}">
+            <h2 style="color:#60a5fa">
+                Download on GitHub
+            </h2>
+        </a>
+    {{- end -}}
+{{- end -}}

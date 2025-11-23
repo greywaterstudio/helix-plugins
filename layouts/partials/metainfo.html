@@ -1,0 +1,9 @@
+{{- if isset .Params "link" -}}
+
+    <div class="meta-info">
+        {{ partial "download.html" . }}
+        <hr>
+        {{ partial "contributor.html" . }}
+    </div>
+
+{{- end }}

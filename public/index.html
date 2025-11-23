@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<title>
+		Helix Plugins
+	</title>
+	<link rel="canonical" href="http://localhost:1313/" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+	
+	<link rel="icon" href="/favicon.svg" />
+	<meta name="description" content="
+  
+
+
+Newest Plugins
+
+Immersive radio
+Suppression
+TFA support
+Voicelines
+
+
+Browse by Category
+   
+    Chat
+    Combat
+    Item
+    
+
+Add Your Plugins
+New plugins can be submitted on Github.
+Just make a pull request following the submission instructions and it will be added to this site." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="index, follow" />
+	<meta charset="utf-8" />
+</head>
+
+
+<body>
+	<div class="background"></div>
+	<main>
+		<h1 id="tag_Plugin Index">
+    Plugin Index
+</h1>
+		<article>
+			
+    
+    <div class="search js-only">
+  <input type="text" id="search" placeholder="Search Plugins...">
+</div>
+<script>
+// @license magnet:?xt=urn:btih:5ac446d35272cc2e4e85e4325b146d0b7ca8f50c&dn=unlicense.txt Unlicense
+
+document.addEventListener("DOMContentLoaded", () => {
+  for (e of document.getElementsByClassName("js-only")) {
+    e.classList.remove("js-only");
+  }
+
+  const plugins = document.querySelectorAll("#artlist li");
+  const search = document.getElementById("search");
+  const oldheading = document.getElementById("newest-plugins");
+  const clearSearch = document.getElementById("clear-search");
+  const artlist = document.getElementById("artlist");
+
+  search.addEventListener("input", () => {
+    // grab search input value
+    const searchText = search.value.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "");
+    const searchTerms = searchText.split(" ");
+    const hasFilter = searchText.length > 0;
+
+    artlist.classList.toggle("list-searched", hasFilter);
+    oldheading.classList.toggle("hidden", hasFilter);
+
+    plugins.forEach(plugin => {
+      const searchString = `${plugin.textContent} ${plugin.dataset.tags}`.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "");
+      const isMatch = searchTerms.every(term => searchString.includes(term));
+
+      plugin.hidden = !isMatch;
+      plugin.classList.toggle("matched-plugin", hasFilter && isMatch);
+    })
+  })
+
+  clearSearch.addEventListener("click", () => {
+    search.value = "";
+    plugins.forEach(plugin => {
+      plugin.hidden = false;
+      plugin.classList.remove("matched-plugin");
+    })
+
+    artlist.classList.remove("list-searched");
+    oldheading.classList.remove("hidden");
+  })
+})
+// @license-end
+</script>
+<h2 id="newest-plugins">Newest Plugins</h2>
+<ul id=artlist>
+<li data-tags="[chat]" ><a href="http://localhost:1313/immersive-radio/">Immersive radio</a></li>
+<li data-tags="[combat]" ><a href="http://localhost:1313/suppression/">Suppression</a></li>
+<li data-tags="[combat item]" ><a href="http://localhost:1313/tfa-support/">TFA support</a></li>
+<li data-tags="[chat]" ><a href="http://localhost:1313/voicelines/">Voicelines</a></li>
+</ul>
+
+<h2 id="browse-by-category">Browse by Category</h2>
+   <ul id="tagcloud">
+    <li><a href="http://localhost:1313/tags/chat" id="tag_chat">Chat</a></li>
+    <li><a href="http://localhost:1313/tags/combat" id="tag_combat">Combat</a></li>
+    <li><a href="http://localhost:1313/tags/item" id="tag_item">Item</a></li>
+    </ul>
+
+<h2 id="add-your-plugins">Add Your Plugins</h2>
+<p>New plugins can be submitted <a href="https://github.com/greywaterstudio/helix-plugins">on Github</a>.
+Just make a pull request following the submission instructions and it will be added to this site.</p>
+
+ 
+</article>
+	</main>
+
+	
+
+	<footer>
+		<a href="http://localhost:1313/">http://localhost:1313/</a><br>
+		<a href="https://greywaterstud.io">greywaterstud.io</a><br>
+		<a href="">Greywater Developer Network</a><br>
+	</footer>
+	
+</body>
+
+</html>

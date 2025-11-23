@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Item on Helix Plugins</title>
+    <link>http://localhost:1313/tags/item/</link>
+    <description>Recent content in Item on Helix Plugins</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/item/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TFA support</title>
+      <link>http://localhost:1313/tfa-support/</link>
+      <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tfa-support/</guid>
+      <description>&lt;p&gt;Yet another gun base supported on my weapon customization architecture. This plugin adds support for TFA attachments and weapons as items integrated into Helix in an immersive way, along with a server config-level customization suite to quickly adjust options such as free attachments or visible crosshairs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features-as-of-now&#34;&gt;Features as of now&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Full support for weapon and attachment items.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Attachments that are tied to items will now require and consume an item when put on a weapon, and be returned when removed. They can also require a tool to use, which is defined in the attachment item file as just an item unique ID.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

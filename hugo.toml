@@ -1,0 +1,15 @@
+baseURL = 'https://ix.greywaterstud.io/'
+languageCode = 'en-us'
+title = 'Helix Plugins'
+discordURL = 'https://discord.gg/9cTPRXsUgs'
+
+[params]
+  favicon = "/favicon.svg"
+  stylesheet = "/style.css"
+  indexarticles = 50
+  taglist = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
