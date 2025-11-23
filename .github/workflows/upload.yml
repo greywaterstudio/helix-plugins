@@ -27,7 +27,7 @@ jobs:
         passphrase: ${{ secrets.shuttle_ssh_pass }}
         port: ${{ secrets.shuttle_port }}
         script: |
-          cd /var/www/plugins
+          cd ~/helix-plugins
           git stash
           git pull --force origin master
-          hugo -s . -d /var/www/plugins/public/ --cacheDir ~/hugocache
+          hugo -s . -d ~/helix-plugins/public/ --cacheDir ~/hugocache
