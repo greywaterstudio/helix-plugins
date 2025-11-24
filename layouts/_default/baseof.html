@@ -7,16 +7,24 @@
 	</title>
 	<link rel="canonical" href="{{ .Site.BaseURL }}" />
 	<link rel="stylesheet" type="text/css" href="/style.css" />
+
 	{{ with .Site.Params.favicon }}
-	<link rel="icon" href="{{ . }}" />
+		<link rel="icon" href="{{ . }}" />
 	{{ end -}}
-	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+
+	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}The free public plugin aggregator that anyone can edit.{{ end }}" />
 	{{ if isset .Params "tags" }}
-	<meta name="keywords" content="{{ with
-    .Params.tags }}{{ delimit . " , " }}{{ end }}"> {{ end -}}
+	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . }}{{ end }}"> {{ end -}}
+
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="robots" content="index, follow" />
 	<meta charset="utf-8" />
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://ix.greywaterstud.io/">
+	<meta property="og:title" content="Helix Plugins | greywaterstudio">
+	<meta property="og:description" content="The free public plugin aggregator that anyone can edit.">
+	<meta property="og:image" content="https://greywaterstud.io/assets/img/greywater-hollow.png">
 </head>
 
 
