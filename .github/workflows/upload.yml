@@ -4,7 +4,7 @@ name: CI
 on:
   # Triggers the workflow on push to master (including merged PRs)
   push:
-    branches: [ master ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,11 +23,10 @@ jobs:
       with:
         host: ix.greywaterstud.io
         username: shuttle
-        key: ${{ secrets.shuttle_ssh }}
-        passphrase: ${{ secrets.shuttle_ssh_pass }}
+        password: ${{ secrets.shuttle_ssh_pass }}
         port: ${{ secrets.shuttle_port }}
         script: |
           cd ~/helix-plugins
           git stash
-          git pull --force origin master
+          git pull --force origin main
           hugo -s . -d ~/helix-plugins/public/ --cacheDir ~/hugocache
