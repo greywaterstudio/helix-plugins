@@ -28,5 +28,5 @@ jobs:
         script: |
           cd ~/helix-plugins
           git stash
-          git pull --force origin master
+          git pull --force origin main
           hugo -s . -d ~/helix-plugins/public/ --cacheDir ~/hugocache
